@@ -1,0 +1,24 @@
+Put your signed release APK in this folder as: latest.apk
+
+The homepage's "Download the app (APK)" button links to /downloads/latest.apk,
+so once you drop a file with that exact name here and redeploy, the button
+works.
+
+Where to get a signed APK from this project:
+1. In the customer_application source, run a Capacitor Android build
+   (npx cap sync android, then build a *release* build in Android Studio,
+   or `./gradlew assembleRelease` / `bundleRelease` from android/).
+2. Sign it with your upload keystore (Android Studio: Build > Generate
+   Signed Bundle/APK). Do NOT ship a debug-signed APK.
+3. Rename the output file to latest.apk and place it here, replacing this
+   note (delete this .txt file once you add the real APK).
+
+A large APK (30MB+) is awkward to commit to git directly. Two common
+alternatives that keep this same download link working:
+- Git LFS for this one file, or
+- Host the APK on GitHub Releases / your own storage bucket, and change
+  the href in site/index.html's "Download the app (APK)" button to that
+  URL instead of downloads/latest.apk.
+
+Also consider publishing a SHA-256 checksum next to the download link, so
+people can verify the file they installed matches what you built.

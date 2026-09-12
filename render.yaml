@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: abhiram-fresh-mart-site
+    runtime: static
+    staticPublishPath: ./site
+    buildCommand: ""
+    pullRequestPreviewsEnabled: false
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: SAMEORIGIN
