@@ -26,7 +26,7 @@ Company name, support email, and address are already filled in everywhere
 India). Two remain, only in `site/legal/customer/terms/index.html`,
 because they need real answers only you have:
 
-- `[GRIEVANCE_OFFICER_NAME]` — required under India's Consumer Protection
+- `[GRIEVANCE_OFFICER_NAME]` (filled in: Swarna Jeswanth) — required under India's Consumer Protection
   (E-Commerce) Rules, 2020. Any responsible person's name works.
 - `[CITY]` — the city whose courts would have jurisdiction over a dispute
   (commonly wherever the business is registered).
